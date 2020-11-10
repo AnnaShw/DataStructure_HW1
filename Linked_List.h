@@ -16,4 +16,7 @@ list* addToIndex(list*, int, int);
 void SelectionSort(list*);
 list* FreeList(list*);
 list* Delete(list*, int);
+int SizeOfList(list* PHead);
+void AddInRightOrder(list* PHead);
+void SearchForValue(list* PHead);
 #endif

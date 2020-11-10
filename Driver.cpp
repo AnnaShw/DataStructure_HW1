@@ -10,7 +10,7 @@ int main()
 	head = BuildList();
 	PrintList(head);
 
-	printf("\nEnter a number for new head node: ");
+	/*printf("\nEnter a number for new head node: ");
 	scanf("%d", &num);
 	head = addToHead(head, num);
 	PrintList(head);
@@ -33,8 +33,10 @@ int main()
 	scanf("%d", &num);
 	head = Delete(head, num);
 	PrintList(head);
-
+	printf("size:%d", SizeOfList(head));
+	AddInRightOrder(head);
+	SearchForValue(head);*/
+	
 	head = FreeList(head);
-
 	return 0;
 }
