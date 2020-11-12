@@ -37,6 +37,11 @@ int main()
 	AddInRightOrder(head);
 	SearchForValue(head);*/
 	
+
+	ReverseList(head);
+	PrintList(head);
+
 	head = FreeList(head);
+
 	return 0;
 }

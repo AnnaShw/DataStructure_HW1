@@ -16,7 +16,13 @@ list* addToIndex(list*, int, int);
 void SelectionSort(list*);
 list* FreeList(list*);
 list* Delete(list*, int);
+
+//______________Targilim_______________________
 int SizeOfList(list* PHead);
 void AddInRightOrder(list* PHead);
 void SearchForValue(list* PHead);
+void ReverseList(list* PHead);
+int SumOfData(list* PHead);
+int MultyEvenIndex(list* PHead);
+
 #endif

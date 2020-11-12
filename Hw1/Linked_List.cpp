@@ -180,16 +180,20 @@ void AddInRightOrder(list* PHead) {
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //Targil 3
-void SearchForValue(list* PHead) {
+void SearchForValue(list* PHead) 
+{
 	int number,flag=1,index=1;
 	printf("Enter number that you want to find:");
 	scanf("%d", &number);
-	while (flag == 1) {
-		if (PHead->data == number) {
+	while (flag == 1) 
+	{
+		if (PHead->data == number)
+		{
 			printf("It was found in index number %d.", index);
 			flag = 0;
 		}
-		else if (PHead->next == NULL) {
+		else if (PHead->next == NULL)
+		{
 			printf("Number %d was not found in the linked list.", number);
 			flag = 0;
 		}
@@ -197,3 +201,58 @@ void SearchForValue(list* PHead) {
 		index += 1;
 	}
 }
+
+//--------------------------------------------------------------------------------------------------------------------------------
+//Targil 4
+ void ReverseList(list * PHead)
+ {
+
+		list* temp_head = PHead;
+		list* next_head = PHead->next;
+		PHead = PHead->next;
+		temp_head->next = NULL;
+
+	 while (PHead != NULL)
+	 {
+		 next_head->next = temp_head;
+		 temp_head = PHead;
+		 next_head = PHead->next;
+	 }
+
+	 PHead = next_head;
+ }
+ //---------------------------------------------------------------------------------------------------------------------------
+ //Targil 5
+ int SumOfData(list* PHead)
+ {
+	 int sum = 0;
+	 while (PHead != NULL)
+	 {
+		 sum += PHead->data;
+		 PHead = PHead->next;
+	 }
+
+	 return sum;
+ }
+//-----------------------------------------------------------------------------------------------------------------------------
+ //Targil 6
+ int MultyEvenIndex(list* PHead)
+ {
+	 int total = 1;
+	 int indexCount = 1;
+	 while(PHead != NULL)
+	 {
+		 if (indexCount % 2 == 0)
+		 {
+			 total *= PHead->data;
+		 }
+		
+		 indexCount++;
+		 PHead = PHead->next;
+	 }
+
+	 return total;
+ }
+
+
+ 
