@@ -21,7 +21,7 @@ list* Delete(list*, int);
 int SizeOfList(list* PHead);
 void AddInRightOrder(list* PHead);
 void SearchForValue(list* PHead);
-void ReverseList(list* PHead);
+void ReverseList(list** PHead);
 int SumOfData(list* PHead);
 int MultyEvenIndex(list* PHead);
 

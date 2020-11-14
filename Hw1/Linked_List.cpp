@@ -156,7 +156,7 @@ void AddInRightOrder(list* PHead) {
 	int flag = 1;
 	list* help = PHead->next;
 	int num = 0;
-	printf("Enter number that you want to add:");
+	printf("\nEnter number that you want to add:");
 	scanf("%d", &num);
 	list* L = BuildNode(num);
 	while (flag != 0) {
@@ -183,7 +183,7 @@ void AddInRightOrder(list* PHead) {
 void SearchForValue(list* PHead) 
 {
 	int number,flag=1,index=1;
-	printf("Enter number that you want to find:");
+	printf("\nEnter number that you want to find:");
 	scanf("%d", &number);
 	while (flag == 1) 
 	{
@@ -204,22 +204,24 @@ void SearchForValue(list* PHead)
 
 //--------------------------------------------------------------------------------------------------------------------------------
 //Targil 4
- void ReverseList(list * PHead)
+ void ReverseList(list** PHead)
  {
+	 list* prev = NULL;
+	 list* current = *PHead;
+	 list* next = NULL;
+	 while (current != NULL) {
+		 // Store next
+		 next = current->next;
 
-		list* temp_head = PHead;
-		list* next_head = PHead->next;
-		PHead = PHead->next;
-		temp_head->next = NULL;
+		 // Reverse current node's pointer
+		 current->next = prev;
 
-	 while (PHead != NULL)
-	 {
-		 next_head->next = temp_head;
-		 temp_head = PHead;
-		 next_head = PHead->next;
+		 // Move pointers one position ahead.
+		 prev = current;
+		 current = next;
 	 }
-
-	 PHead = next_head;
+	 *PHead = prev;
+	 
  }
  //---------------------------------------------------------------------------------------------------------------------------
  //Targil 5
